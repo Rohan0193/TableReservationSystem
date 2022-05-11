@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.controller.adminAccountManagementController">
+   <top>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="200.0" layoutY="-8.0" stroke="BLACK" strokeType="INSIDE" width="1000.0" />
+            <Text fill="#ffc000" layoutX="247.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Admin Account Management" textAlignment="CENTER">
+               <font>
+                  <Font name="Malgun Gothic Bold" size="36.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="202.0" fitWidth="185.0" layoutX="11.0" layoutY="-17.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../../img/Arublogo.JPG" />
+               </image>
+            </ImageView>
+            <Button fx:id="backBtn" mnemonicParsing="false" onAction="#handleBackBtn" opacity="0.8" text="&lt;">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="78.0" fitWidth="97.0" layoutX="781.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/employeeIcon.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffc000" height="608.0" layoutY="-8.0" stroke="BLACK" strokeType="INSIDE" width="1000.0" />
+            <TableView fx:id="table" layoutX="24.0" layoutY="63.0" prefHeight="514.0" prefWidth="953.0">
+              <columns>
+                <TableColumn fx:id="employeeID" prefWidth="109.0" text="employeeID" />
+                <TableColumn fx:id="firstName" prefWidth="94.0" text="firstName" />
+                  <TableColumn fx:id="lastName" prefWidth="122.0" text="lastName" />
+                  <TableColumn fx:id="role" prefWidth="87.0" text="Role" />
+                  <TableColumn fx:id="username" prefWidth="127.0" text="username" />
+                  <TableColumn fx:id="accountStatus" minWidth="3.0" prefWidth="160.0" text="accountStatus" />
+                  <TableColumn fx:id="lastTableBooked" minWidth="0.0" prefWidth="253.0" text="lastTableBooked" />
+              </columns>
+            </TableView>
+            <Button fx:id="refreshBtn" layoutX="24.0" layoutY="25.0" mnemonicParsing="false" onAction="#initialize" prefHeight="25.0" prefWidth="70.0" text="Refresh" />
+            <Button fx:id="updateDetailsBtn" layoutX="107.0" layoutY="25.0" mnemonicParsing="false" onAction="#handleUpdateDetailsBtn" text="Update Details" />
+            <Button fx:id="deleteUserBtn" layoutX="212.0" layoutY="25.0" mnemonicParsing="false" onAction="#handleDeleteUserBtn" text="Delete User" />
+            <Button fx:id="addUserBtn" layoutX="303.0" layoutY="25.0" mnemonicParsing="false" onAction="#handleAddUserBtn" prefHeight="25.0" prefWidth="76.0" text="Add User" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

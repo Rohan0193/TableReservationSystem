@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.controller.covidRestrictionsPopupController">
+   <children>
+      <TableView fx:id="currentRestrictionsTable" layoutX="306.0" layoutY="95.0" prefHeight="290.0" prefWidth="280.0">
+        <columns>
+          <TableColumn fx:id="restrictionTypeCol" prefWidth="139.66668701171875" text="restrictionType" />
+          <TableColumn fx:id="restrictionDateCol" minWidth="0.33331298828125" prefWidth="139.0" text="restrictionDate" />
+        </columns>
+      </TableView>
+      <DatePicker fx:id="selectDate" layoutX="24.0" layoutY="268.0" prefHeight="32.0" prefWidth="254.0" />
+      <ComboBox fx:id="selectRestriction" layoutX="24.0" layoutY="153.0" prefHeight="32.0" prefWidth="254.0" />
+      <Button fx:id="placeRestrictionBtn" layoutX="23.0" layoutY="382.0" mnemonicParsing="false" onAction="#handlePlaceRestrictionsBtn" prefHeight="32.0" prefWidth="116.0" text="Place Restriction" />
+      <Button fx:id="exitBtn" layoutX="159.0" layoutY="382.0" mnemonicParsing="false" onAction="#handleExitBtn" prefHeight="32.0" prefWidth="116.0" text="Exit" />
+      <Text layoutX="162.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Set COVID-19 Restrictions">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="360.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Restrictions:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="66.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Place Restriction:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="23.0" layoutY="258.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Date:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Button fx:id="removeRestrictionBtn" layoutX="387.0" layoutY="392.0" mnemonicParsing="false" onAction="#handleRemoveRestrictionBtn" text="Remove Restriction" />
+      <Text layoutX="24.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Restriction type:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

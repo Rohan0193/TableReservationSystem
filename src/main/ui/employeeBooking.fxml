@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.controller.employeeBookingController">
+   <top>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="200.0" layoutY="-8.0" stroke="BLACK" strokeType="INSIDE" width="1000.0" />
+            <Text fill="#ffc000" layoutX="262.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee Table Booking" textAlignment="CENTER">
+               <font>
+                  <Font name="Malgun Gothic Bold" size="36.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="202.0" fitWidth="185.0" layoutX="11.0" layoutY="-17.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../../img/Arublogo.JPG" />
+               </image>
+            </ImageView>
+            <Button fx:id="backBtn" mnemonicParsing="false" onAction="#handleBackBtn" opacity="0.8" text="&lt;">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Label fx:id="displayUsernameLabel" alignment="CENTER_RIGHT" layoutX="733.0" layoutY="3.0" prefHeight="39.0" prefWidth="250.0" text="Logged in as:" textFill="#ffc000">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="displayRoleLabel" alignment="CENTER_RIGHT" layoutX="732.0" layoutY="32.0" prefHeight="39.0" prefWidth="252.0" text="Role:" textFill="#ffc000">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="logoutBtn" layoutX="872.0" layoutY="152.0" mnemonicParsing="false" onAction="#handleLogoutBtn" prefHeight="25.0" prefWidth="110.0" text="Logout">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <ImageView fitHeight="78.0" fitWidth="97.0" layoutX="715.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/bookingIcon.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffc000" height="608.0" layoutY="-8.0" stroke="BLACK" strokeType="INSIDE" width="1000.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#434646" height="579.0" layoutX="17.0" layoutY="5.0" stroke="BLACK" strokeType="INSIDE" width="966.0" />
+            <Rectangle fx:id="table1" arcHeight="5.0" arcWidth="5.0" fill="LIMEGREEN" height="56.0" layoutX="358.0" layoutY="55.0" onMouseClicked="#handleTable" onMouseEntered="#hoverAnimationEnter" onMouseExited="#hoverAnimationExit" rotate="90.0" stroke="BLACK" strokeType="INSIDE" width="28.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Rectangle>
+            <Rectangle fx:id="table16" arcHeight="5.0" arcWidth="5.0" fill="LIMEGREEN" height="56.0" layoutX="344.0" layoutY="152.0" onMouseClicked="#handleTable" onMouseEntered="#hoverAnimationEnter" onMouseExited="#hoverAnimationExit" stroke="BLACK" strokeType="INSIDE" width="28.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Rectangle>
+            <Rectangle fx:id="table15" arcHeight="5.0" arcWidth="5.0" fill="LIMEGREEN" height="56.0" layoutX="344.0" layoutY="219.0" onMouseClicked="#handleTable" onMouseEntered="#hoverAnimationEnter" onMouseExited="#hoverAnimationExit" stroke="BLACK" strokeType="INSIDE" width="28.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Rectangle>
+            <Rectangle fx:id="table14" arcHeight="5.0" arcWidth="5.0" fill="LIMEGREEN" height="56.0" layoutX="344.0" layoutY="289.0" onMouseClicked="#handleTable" onMouseEntered="#hoverAnimationEnter" onMouseExited="#hoverAnimationExit" stroke="BLACK" strokeType="INSIDE" width="28.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Rectangle>
+            <Rectangle fx:id="table13" arcHeight="5.0" arcWidth="5.0" fill="LIMEGREEN" height="56.0" layoutX="344.0" layoutY="361.0" onMouseClicked="#handleTable" onMouseEntered="#hoverAnimationEnter" onMouseExited="#hoverAnimationExit" stroke="BLACK" strokeType="INSIDE" width="28.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Rectangle>
+            <Rectangle fx:id="table12" arcHeight="5.0" arcWidth="5.0" fill="LIMEGREEN" height="56.0" layoutX="344.0" layoutY="430.0" onMouseClicked="#handleTable" onMouseEntered="#hoverAnimationEnter" onMouseExited="#hoverAnimationExit" stroke="BLACK" strokeType="INSIDE" width="28.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Rectangle>
+            <Rectangle fx:id="table2" arcHeight="5.0" arcWidth="5.0" fill="LIMEGREEN" height="56.0" layoutX="476.0" layoutY="55.0" onMouseClicked="#handleTable" onMouseEntered="#hoverAnimationEnter" onMouseExited="#hoverAnimationExit" rotate="90.0" stroke="BLACK" strokeType="INSIDE" width="28.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Rectangle>
+            <Rectangle fx:id="table11" arcHeight="5.0" arcWidth="5.0" fill="LIMEGREEN" height="56.0" layoutX="448.0" layoutY="458.0" onMouseClicked="#handleTable" onMouseEntered="#hoverAnimationEnter" onMouseExited="#hoverAnimationExit" rotate="90.0" stroke="BLACK" strokeType="INSIDE" width="28.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Rectangle>
+            <Rectangle fx:id="table10" arcHeight="5.0" arcWidth="5.0" fill="LIMEGREEN" height="56.0" layoutX="518.0" layoutY="458.0" onMouseClicked="#handleTable" onMouseEntered="#hoverAnimationEnter" onMouseExited="#hoverAnimationExit" rotate="90.0" stroke="BLACK" strokeType="INSIDE" width="28.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Rectangle>
+            <Rectangle fx:id="table9" arcHeight="5.0" arcWidth="5.0" fill="LIMEGREEN" height="56.0" layoutX="589.0" layoutY="458.0" onMouseClicked="#handleTable" onMouseEntered="#hoverAnimationEnter" onMouseExited="#hoverAnimationExit" rotate="90.0" stroke="BLACK" strokeType="INSIDE" width="28.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Rectangle>
+            <Rectangle fx:id="table8" arcHeight="5.0" arcWidth="5.0" fill="LIMEGREEN" height="56.0" layoutX="703.0" layoutY="444.0" onMouseClicked="#handleTable" onMouseEntered="#hoverAnimationEnter" onMouseExited="#hoverAnimationExit" stroke="BLACK" strokeType="INSIDE" width="28.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Rectangle>
+            <Rectangle fx:id="table3" arcHeight="5.0" arcWidth="5.0" fill="LIMEGREEN" height="56.0" layoutX="490.0" layoutY="152.0" onMouseClicked="#handleTable" onMouseEntered="#hoverAnimationEnter" onMouseExited="#hoverAnimationExit" stroke="BLACK" strokeType="INSIDE" width="28.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Rectangle>
+            <Rectangle fx:id="table4" arcHeight="5.0" arcWidth="5.0" fill="LIMEGREEN" height="56.0" layoutX="490.0" layoutY="219.0" onMouseClicked="#handleTable" onMouseEntered="#hoverAnimationEnter" onMouseExited="#hoverAnimationExit" stroke="BLACK" strokeType="INSIDE" width="28.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Rectangle>
+            <Rectangle fx:id="table7" arcHeight="5.0" arcWidth="5.0" fill="LIMEGREEN" height="56.0" layoutX="703.0" layoutY="374.0" onMouseClicked="#handleTable" onMouseEntered="#hoverAnimationEnter" onMouseExited="#hoverAnimationExit" stroke="BLACK" strokeType="INSIDE" width="28.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Rectangle>
+            <Rectangle fx:id="table6" arcHeight="5.0" arcWidth="5.0" fill="LIMEGREEN" height="56.0" layoutX="617.0" layoutY="317.0" onMouseClicked="#handleTable" onMouseEntered="#hoverAnimationEnter" onMouseExited="#hoverAnimationExit" rotate="90.0" stroke="BLACK" strokeType="INSIDE" width="28.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Rectangle>
+            <Rectangle fx:id="table5" arcHeight="5.0" arcWidth="5.0" fill="LIMEGREEN" height="56.0" layoutX="546.0" layoutY="317.0" onMouseClicked="#handleTable" onMouseEntered="#hoverAnimationEnter" onMouseExited="#hoverAnimationExit" rotate="90.0" stroke="BLACK" strokeType="INSIDE" width="28.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Rectangle>
+            <Line endX="103.0" layoutX="749.0" layoutY="415.0" rotate="90.0" startX="-100.0" stroke="#f8f6f6" strokeWidth="2.0" />
+            <Line endX="159.5" endY="0.5" layoutX="591.0" layoutY="517.0" startX="-267.0" startY="0.5" stroke="#fffdfd" strokeWidth="2.0" />
+            <Line endX="100.0" layoutX="650.0" layoutY="314.0" startX="-109.0" stroke="#f8f7f7" strokeWidth="2.0" />
+            <Line endX="365.0" layoutX="191.0" layoutY="285.0" rotate="90.0" startX="-100.0" stroke="#fcfcfc" strokeWidth="2.0" />
+            <Line endX="163.0" layoutX="509.0" layoutY="183.0" rotate="90.0" startX="-100.0" stroke="#fffdfd" strokeWidth="2.0" />
+            <Line endX="117.0" endY="-1.0" layoutX="424.0" layoutY="52.0" startX="-100.0" stroke="#f5f3f3" strokeWidth="2.0" />
+            <Line endX="392.0" layoutX="163.0" layoutY="285.0" rotate="90.0" startX="-100.0" stroke="#fcfcfc" strokeWidth="2.0" />
+            <Line endX="186.0" endY="0.5" layoutX="578.0" layoutY="531.0" startX="-267.0" startY="0.5" stroke="#fffdfd" strokeWidth="2.0" />
+            <Line endX="130.0" layoutX="749.0" layoutY="416.0" rotate="90.0" startX="-100.0" stroke="#f8f6f6" strokeWidth="2.0" />
+            <Line endX="100.0" layoutX="664.0" layoutY="301.0" startX="-105.0" stroke="#f8f7f7" strokeWidth="2.0" />
+            <Line endX="163.0" layoutX="525.0" layoutY="170.0" rotate="90.0" startX="-100.0" stroke="#fffdfd" strokeWidth="2.0" />
+            <Line endX="145.0" layoutX="411.0" layoutY="38.0" startX="-101.0" stroke="#f5f3f3" strokeWidth="2.0" />
+            <Text fill="#fcf9f9" layoutX="590.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Key:" wrappingWidth="107.64453125">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Text>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="LIMEGREEN" height="21.0" layoutX="590.0" layoutY="79.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d02b1c" height="21.0" layoutX="590.0" layoutY="123.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#21b9ff" height="21.0" layoutX="590.0" layoutY="170.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
+            <Text fill="#fcf9f9" layoutX="621.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Table Available">
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+            </Text>
+            <Text fill="#fcf9f9" layoutX="621.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Table booked by another employee">
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+            </Text>
+            <Text fill="#fcf9f9" layoutX="621.0" layoutY="182.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Booking Requested by another employee and Admin Confirmation Pending" wrappingWidth="281.5166015625">
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+            </Text>
+            <DatePicker fx:id="datePicker" layoutX="52.0" layoutY="64.0" onAction="#handleDatePicker" prefHeight="30.0" prefWidth="219.0" />
+            <Text fill="#fcf9f9" layoutX="52.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Date:" wrappingWidth="107.64453125">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Text>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffbf1f" height="21.0" layoutX="591.0" layoutY="218.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
+            <Text fill="#fcf9f9" layoutX="621.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Table unavailable due to COVID-19 social distancing guidelines or admined locked" wrappingWidth="293.5166015625">
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
